@@ -1,0 +1,22 @@
+>>> from apps.dojo_ninjas_app.models import *
+
+>>> Dojos.objects.create(name="dojo1", city="Dallas", state ="TX")
+<Dojos: Dojos object (1)>
+>>> Dojos.objects.create(name="dojo2", city="Chicago", state ="IL")
+<Dojos: Dojos object (2)>
+>>> Dojos.objects.create(name="dojo3", city="New York", state ="NY")
+<Dojos: Dojos object (3)>
+>>> 
+
+>>> dojo_delete=Dojos.objects.all()
+>>> dojo_delete.delete()
+(3, {'dojo_ninjas_app.Dojos': 3})
+
+>>> Dojos.objects.all()
+<QuerySet []>
+>>> Dojos.objects.create(name="dojo1", city="Osh", state ="KGZ")
+<Dojos: Dojos object (4)>
+>>> Dojos.objects.create(name="dojo2", city="Doha", state ="Qatar")
+<Dojos: Dojos object (5)>
+>>> Dojos.objects.create(name="dojo3", city="Dubai", state ="UAE")
+<Dojos: Dojos object (6)>

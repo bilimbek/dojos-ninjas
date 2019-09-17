@@ -1,0 +1,30 @@
+>>> Users.objects.create(first_name= "Bill", last_name="Browm", email_address="bill@cloud.com", age="31")
+Bill Browm, email: bill@cloud.com, age: 31
+>>> Users.objects.create(first_name= "Hach", last_name="hachev", email_address="hach@cloud.com", age="41")
+Hach hachev, email: hach@cloud.com, age: 41
+>>> Users.objects.create(first_name= "Petr", last_name="petrov", email_address="petr@cloud.com", age="21")
+Petr petrov, email: petr@cloud.com, age: 21
+>>> 
+
+>>> Users.objects.get(id=4)
+William brown, email: bill@cloud.com, age: 1988-05-27
+>>> Users.objects.get(id=5)
+Bill Browm, email: bill@cloud.com, age: 31
+>>> Users.objects.get(id=6)
+Hach hachev, email: hach@cloud.com, age: 41
+
+>>> Users.objects.last()
+Petr petrov, email: petr@cloud.com, age: 21
+>>> 
+
+>>> Users.objects.first()
+petr petrov, email: petr@cloud.com, age: 1995-05-17
+>>> user1=Users.objects.last()
+>>> user1.age
+21
+>>> user1.first_name
+'Petr'
+>>> user2=Users.objects.get(id=4)
+>>> user2.first_name
+'William'
+>>> 
